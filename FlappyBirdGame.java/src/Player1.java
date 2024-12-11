@@ -15,7 +15,7 @@ public class Player1 {
             completeImage = ImageIO.read(getClass().getResource("/flappybirdss.png"));
             loadBirdImages();
         } catch (IOException e) {
-            System.err.println("Failed to load the complete bird image.");
+            System.err.println("image not loaded");
             e.printStackTrace();
         }
     }
@@ -31,10 +31,10 @@ public class Player1 {
             birdImages[1] = birdImage2;
             birdImages[2] = birdImage3;
         } catch (RasterFormatException e) {
-            System.err.println("Error processing subimages. Check the coordinates and dimensions.");
+            System.err.println("image not loaded");
             e.printStackTrace();
         } catch (IllegalArgumentException e) {
-            System.err.println("Invalid arguments passed to getSubimage. Ensure correct coordinates and dimensions.");
+            System.err.println("image not loaded");
             e.printStackTrace();
         }
     }
